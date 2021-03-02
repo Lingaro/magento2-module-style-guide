@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="breadcrumbs">
+    <ul class="items">
+        <li class="item home">
+            <a href="#" title="<?= $escaper->escapeHtmlAttr(__('Home')) ?>"><?= $escaper->escapeHtml(__('Home')) ?></a>
+        </li>
+        <li class="item category">
+            <a href="#" title="<?= $escaper->escapeHtmlAttr(__('Category')) ?>"><?= $escaper->escapeHtml(__('Category')) ?></a>
+        </li>
+        <li class="item category">
+            <a href="#" title="<?= $escaper->escapeHtmlAttr(__('Subcategory')) ?>"><?= $escaper->escapeHtml(__('Subcategory')) ?></a>
+        </li>
+        <li class="item product">
+            <strong><?= $escaper->escapeHtml(__('Product')) ?></strong>
+        </li>
+    </ul>
+</div>

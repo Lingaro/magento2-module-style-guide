@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="pages">
+    <strong class="label" id="paging-label"><?= $escaper->escapeHtml(__('Page:')) ?></strong>
+    <ul class="items pages-items" aria-labelledby="paging-label">
+        <li class="item pages-item-previous">
+            <a class="action  previous" href="#" title="<?= $escaper->escapeHtmlAttr(__('Previous')) ?>">
+                <span class="label"><?= $escaper->escapeHtml(__('Page')) ?></span>
+                <span><?= $escaper->escapeHtml(__('Previous')) ?></span>
+            </a>
+        </li>
+        <li class="item">
+            <a href="#" class="page">
+                <span class="label"><?= $escaper->escapeHtml(__('Page')) ?></span>
+                <span>1</span>
+            </a>
+        </li>
+        <li class="item current">
+            <strong class="page">
+                <span class="label"><?= $escaper->escapeHtml(__('Current Page')) ?></span>
+                <span>2</span>
+            </strong>
+        </li>
+        <li class="item">
+            <a href="#" class="page">
+                <span class="label"><?= $escaper->escapeHtml(__('Page')) ?></span>
+                <span>3</span>
+            </a>
+        </li>
+        <li class="item">
+            <a href="#" class="page">
+                <span class="label"><?= $escaper->escapeHtml(__('Page')) ?></span>
+                <span>4</span>
+            </a>
+        </li>
+        <li class="item">
+            <a href="#" class="page">
+                <span class="label"><?= $escaper->escapeHtml(__('Page')) ?></span>
+                <span>5</span>
+            </a>
+        </li>
+        <li class="item pages-item-next">
+            <a class="action  next" href="#" title="<?= $escaper->escapeHtmlAttr(__('Next')) ?>">
+                <span class="label"><?= $escaper->escapeHtml(__('Page')) ?></span>
+                <span><?= $escaper->escapeHtml(__('Next')) ?></span>
+            </a>
+        </li>
+    </ul>
+</div>

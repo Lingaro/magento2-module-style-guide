@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Orba\StyleGuide\ViewModel\IconsProvider $viewModel */
+$viewModel = $block->getViewModel();
+$icons = $viewModel->getIcons();
+?>
+<?php if (!empty($icons)): ?>
+<ul class="style-guide-icons">
+    <?php foreach ($icons as $icon): ?>
+        <li class="style-guide-icon">
+            <span class="style-guide-icon-visualization">
+                <span class="<?= $escaper->escapeHtmlAttr($icon->getCssClass()) ?>"></span>
+            </span>
+            <span class="style-guide-icon-name" title="<?= $escaper->escapeHtmlAttr($icon->getName()) ?>"><?= $escaper->escapeHtml($icon->getName()) ?></span>
+        </li>
+    <?php endforeach; ?>
+</ul>
+<?php endif ?>

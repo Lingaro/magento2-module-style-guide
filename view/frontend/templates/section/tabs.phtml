@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
+    <div class="data item title" data-role="collapsible" id="tab-label-first">
+        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#first" id="tab-label-first-title">
+            <?= $escaper->escapeHtml(__('First tab')) ?>
+        </a>
+    </div>
+    <div class="data item content" aria-labelledby="tab-label-first-title" id="first" data-role="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tristique felis, sed efficitur felis. Maecenas fermentum eleifend libero sed ornare. Integer interdum felis non diam interdum, sed sagittis lacus ultrices. Mauris vel neque ut dui cursus pulvinar et ut purus. Aliquam tincidunt sed velit id porttitor.</p>
+        <p>Nunc ullamcorper nibh orci, et molestie risus gravida sit amet. Integer sit amet faucibus enim. Phasellus hendrerit tempus ultrices. Etiam vitae neque non ex elementum dignissim non bibendum elit. Integer varius odio id gravida finibus.</p>
+    </div>
+    <div class="data item title" data-role="collapsible" id="tab-label-second">
+        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#second" id="tab-label-second-title">
+            <?= $escaper->escapeHtml(__('Second tab')) ?>
+        </a>
+    </div>
+    <div class="data item content" aria-labelledby="tab-label-second-title" id="second" data-role="content">
+        <p>Nam aliquam, quam sit amet fermentum varius, purus enim interdum sem, vel accumsan velit diam sed diam. Suspendisse scelerisque tortor ut metus sodales, nec lobortis eros hendrerit. Nullam finibus neque consectetur efficitur suscipit. Aenean vel magna in elit dapibus blandit in sit amet nunc. Phasellus tempus vel mi nec vestibulum.</p>
+        <p>Etiam rhoncus tristique iaculis. Nullam porta mi massa, in venenatis ligula efficitur id. Donec efficitur suscipit tellus. Pellentesque vel cursus leo. Sed feugiat dapibus leo eget consectetur. Suspendisse ultrices fringilla euismod. Nam pellentesque, lectus vitae sagittis lacinia, ligula urna laoreet felis, nec imperdiet tellus neque a augue.</p>
+    </div>
+</div>

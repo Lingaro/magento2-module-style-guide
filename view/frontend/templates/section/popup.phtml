@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<button type="button" class="action secondary" data-trigger="trigger">
+    <span><?= $escaper->escapeHtml(__('Open popup')) ?></span>
+</button>
+<div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Popup title',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'buttons': [{
+                text: jQuery.mage.__('Some action'),
+                class: 'action primary'
+            }]
+        }}">
+    <div class="content for-modal-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum est dolor, nec pharetra leo efficitur ac. Morbi odio diam, iaculis eget nulla a, finibus ullamcorper ipsum. Vestibulum mi massa, lobortis ac neque in, egestas consectetur metus. Vivamus tempor elit neque, sed tincidunt arcu suscipit in. Nulla mattis egestas mi, fermentum porta sem laoreet id. Phasellus dictum ex eget sapien iaculis gravida. Donec laoreet libero rutrum quam rutrum, in tincidunt enim egestas. Morbi volutpat libero ut augue luctus, sed mollis neque consectetur. Vestibulum aliquam nibh vitae dui consequat facilisis. Cras magna eros, fermentum sed venenatis vel, commodo vel ipsum. Donec gravida lacinia sapien sed malesuada. Duis in posuere neque, vitae sodales ante. Quisque iaculis neque quis nibh ornare tempor. Fusce justo tortor, imperdiet vel egestas id, hendrerit eget tortor. Suspendisse non tortor molestie, rhoncus metus vel, consequat odio.</p>
+        <p>Quisque mattis augue ut risus lobortis, et laoreet neque pretium. Suspendisse blandit aliquet tincidunt. Proin et hendrerit eros. Praesent gravida bibendum mi, ut porta tellus consequat quis. In dignissim nunc vel ultrices dictum. Nam arcu leo, blandit at nulla in, scelerisque gravida orci. In tincidunt auctor quam quis egestas. Nam convallis, mi et efficitur pretium, libero ex vehicula magna, tempor ultrices sem nisi a ligula. Ut ac ligula a risus suscipit fringilla id mollis velit. Duis fermentum enim cursus velit auctor, vehicula rhoncus nibh faucibus. Vivamus finibus sollicitudin dolor, eu pulvinar odio vulputate vel. Morbi at nulla vitae orci ultricies consequat.</p>
+    </div>
+</div>

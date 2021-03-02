@@ -1,0 +1,162 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<form data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span><?= $escaper->escapeHtml(__('Enabled fields')) ?></span>
+        </legend>
+        <div class="field required">
+            <label class="label" for="style-guide-input-required">
+                <span><?= $escaper->escapeHtml(__('Required input')) ?></span>
+            </label>
+            <div class="control">
+                <input id="style-guide-input-required" class="input-text" type="text" title="<?= $escaper->escapeHtmlAttr(__('Required input')) ?>"
+                       name="text_required" placeholder="<?= $escaper->escapeHtmlAttr(__('Placeholder')) ?>" data-validate="{required: true}" />
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="style-guide-input-password">
+                <span><?= $escaper->escapeHtml(__('Password')) ?></span>
+            </label>
+            <div class="control">
+                <input id="style-guide-input-password" class="input-text" type="password" title="<?= $escaper->escapeHtmlAttr(__('Password')) ?>"
+                       name="password" autocomplete="off" />
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="style-guide-input-select">
+                <span><?= $escaper->escapeHtml(__('Select')) ?></span>
+            </label>
+            <div class="control">
+                <select name="select" class="select" id="style-guide-input-select" title="<?= $escaper->escapeHtmlAttr(__('Select')) ?>">
+                    <option><?= $escaper->escapeHtml(__('Choose option')) ?></option>
+                    <option><?= $escaper->escapeHtml(__('Option 1')) ?></option>
+                    <option><?= $escaper->escapeHtml(__('Option 2')) ?></option>
+                </select>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="style-guide-input-textarea">
+                <span><?= $escaper->escapeHtml(__('Textarea')) ?></span>
+            </label>
+            <div class="control">
+                <textarea name="textarea" id="style-guide-input-textarea" class="textarea"
+                          title="<?= $escaper->escapeHtmlAttr(__('Textarea')) ?>"></textarea>
+            </div>
+        </div>
+        <div class="field choice">
+            <input class="checkbox" type="checkbox" title="<?= $escaper->escapeHtmlAttr(__('Standard checkbox')) ?>" value="1"
+                   name="checkbox_standard" id="style-guide-input-checkbox"/>
+            <label class="label" for="style-guide-input-checkbox">
+                <span><?= $escaper->escapeHtml(__('Standard checkbox with long label')) ?> lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat accumsan tellus ac rhoncus. Integer blandit augue ac venenatis accumsan. Ut dapibus, nunc ac varius ultrices.</span>
+            </label>
+        </div>
+        <div class="field choice required">
+            <input class="checkbox" type="checkbox" title="<?= $escaper->escapeHtmlAttr(__('Required checkbox')) ?>" value="1"
+                   name="checkbox_required" id="style-guide-input-checkbox-required" data-validate="{required: true}"/>
+            <label class="label" for="style-guide-input-checkbox-required">
+                <span><?= $escaper->escapeHtml(__('Required checkbox')) ?></span>
+            </label>
+        </div>
+        <div class="field choice">
+            <input class="radio" type="radio" name="radio" title="<?= $escaper->escapeHtmlAttr(__('Radio 1')) ?>" value="1"
+                   id="style-guide-input-radio-1"/>
+            <label class="label" for="style-guide-input-radio-1">
+                <span><?= $escaper->escapeHtml(__('Radio 1 label')) ?></span>
+            </label>
+        </div>
+        <div class="field choice">
+            <input class="radio" type="radio" name="radio" title="<?= $escaper->escapeHtmlAttr(__('Radio 2')) ?>" value="2"
+                   id="style-guide-input-radio-2"/>
+            <label class="label" for="style-guide-input-radio-2">
+                <span><?= $escaper->escapeHtml(__('Radio 2 label')) ?></span>
+            </label>
+        </div>
+    </fieldset>
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span><?= $escaper->escapeHtml(__('Disabled fields')) ?></span>
+        </legend>
+        <div class="field disabled">
+            <label class="label" for="style-guide-input-default-disabled">
+                <span><?= $escaper->escapeHtml(__('Default input')) ?></span>
+            </label>
+            <div class="control">
+                <input id="style-guide-input-default-disabled" class="input-text" type="text" title="<?= $escaper->escapeHtmlAttr(__('Default input')) ?>"
+                       name="text_disabled" placeholder="<?= $escaper->escapeHtmlAttr(__('Placeholder')) ?>" disabled="disabled" />
+            </div>
+        </div>
+        <div class="field disabled">
+            <label class="label" for="style-guide-input-password-disabled">
+                <span><?= $escaper->escapeHtml(__('Password')) ?></span>
+            </label>
+            <div class="control">
+                <input id="style-guide-input-password-disabled" class="input-text" type="password" title="<?= $escaper->escapeHtmlAttr(__('Password')) ?>"
+                       name="password_disabled" autocomplete="off" disabled="disabled" />
+            </div>
+        </div>
+        <div class="field disabled">
+            <label class="label" for="style-guide-input-select-disabled">
+                <span><?= $escaper->escapeHtml(__('Select')) ?></span>
+            </label>
+            <div class="control">
+                <select name="select_disabled" class="select" id="style-guide-input-select-disabled"
+                        title="<?= $escaper->escapeHtmlAttr(__('Select')) ?>" disabled="disabled">
+                    <option><?= $escaper->escapeHtml(__('Choose option')) ?></option>
+                    <option><?= $escaper->escapeHtml(__('Option 1')) ?></option>
+                    <option><?= $escaper->escapeHtml(__('Option 2')) ?></option>
+                </select>
+            </div>
+        </div>
+        <div class="field disabled">
+            <label class="label" for="style-guide-input-textarea-disabled">
+                <span><?= $escaper->escapeHtml(__('Textarea')) ?></span>
+            </label>
+            <div class="control">
+                <textarea id="style-guide-input-textarea-disabled" class="textarea" title="<?= $escaper->escapeHtmlAttr(__('Textarea')) ?>"
+                          name="textarea_disabled" disabled="disabled"></textarea>
+            </div>
+        </div>
+        <div class="field choice disabled">
+            <input class="checkbox" type="checkbox" title="<?= $escaper->escapeHtmlAttr(__('Checkbox label')) ?>" value="1"
+                   name="checkbox_disabled" id="style-guide-input-checkbox-disabled" disabled="disabled" checked="checked"/>
+            <label class="label" for="style-guide-input-checkbox-disabled">
+                <span><?= $escaper->escapeHtml(__('Checkbox label')) ?></span>
+            </label>
+        </div>
+        <div class="field choice disabled">
+            <input class="radio" type="radio" name="radio_disabled" title="<?= $escaper->escapeHtmlAttr(__('Radio 1')) ?>" value="1"
+                   id="style-guide-input-radio-disabled-1" disabled="disabled"/>
+            <label class="label" for="style-guide-input-radio-disabled-1">
+                <span><?= $escaper->escapeHtml(__('Radio 1 label')) ?></span>
+            </label>
+        </div>
+        <div class="field choice disabled">
+            <input class="radio" type="radio" name="radio_disabled" title="<?= $escaper->escapeHtmlAttr(__('Radio 2')) ?>" value="2"
+                   id="style-guide-input-radio-disabled-2" disabled="disabled" checked="checked"/>
+            <label class="label" for="style-guide-input-radio-disabled-2">
+                <span><?= $escaper->escapeHtml(__('Radio 2 label')) ?></span>
+            </label>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button class="action submit primary" type="submit" title="<?= $escaper->escapeHtmlAttr(__('Submit')) ?>">
+                <span><?= $escaper->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+        <div class="secondary">
+            <a class="action" href="#"><?= $escaper->escapeHtml(__('Secondary action')) ?></a>
+        </div>
+    </div>
+</form>

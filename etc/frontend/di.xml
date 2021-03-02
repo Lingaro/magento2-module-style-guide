@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Exemplary color
+    <virtualType name="Orba\StyleGuide\Model\Color\Example" type="Orba\StyleGuide\Model\Color">
+        <arguments>
+            <argument name="name" xsi:type="string" translatable="true">example</argument>
+            <argument name="cssColor" xsi:type="string">#000000</argument>
+        </arguments>
+    </virtualType>
+    -->
+    <type name="Orba\StyleGuide\ViewModel\ColorsProvider">
+        <arguments>
+            <argument name="colors" xsi:type="array">
+                <!-- Exemplary color
+                <item name="example" xsi:type="object">Orba\StyleGuide\Model\Color\Example</item>
+                -->
+            </argument>
+        </arguments>
+    </type>
+    <!-- Exemplary icon
+    <virtualType name="Orba\StyleGuide\Model\Icon\Example" type="Orba\StyleGuide\Model\Icon">
+        <arguments>
+            <argument name="name" xsi:type="string" translatable="true">example</argument>
+            <argument name="cssClass" xsi:type="string">orba-base-sprite orba-base-icon-example</argument>
+        </arguments>
+    </virtualType>
+    -->
+    <type name="Orba\StyleGuide\ViewModel\IconsProvider">
+        <arguments>
+            <argument name="icons" xsi:type="array">
+                <!-- Exemplary icon
+                <item name="example" xsi:type="object">Orba\StyleGuide\Model\Icon\Example</item>
+                -->
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Orba\StyleGuide\Model\Section\Colors" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Colors</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/colors.phtml</argument>
+            <argument name="viewModel" xsi:type="object">Orba\StyleGuide\ViewModel\ColorsProvider</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Layouts" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Layouts</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/layouts.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Headings" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Headings</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/headings.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Paragraph" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Paragraph</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/paragraph.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\UnorderedList" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Unordered List</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/unordered_list.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\OrderedList" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Ordered List</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/ordered_list.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Links" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Links</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/links.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Buttons" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Buttons</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/buttons.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Form" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Form</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/form.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Tabs" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Tabs</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/tabs.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Breadcrumbs" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Breadcrumbs</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/breadcrumbs.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Tooltips" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Tooltips</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/tooltips.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Messages" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Messages</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/messages.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Pagination" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Pagination</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/pagination.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Popup" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Popup</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/popup.phtml</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Orba\StyleGuide\Model\Section\Icons" type="Orba\StyleGuide\Model\Section">
+        <arguments>
+            <argument name="title" xsi:type="string" translatable="true">Icons</argument>
+            <argument name="template" xsi:type="string">Orba_StyleGuide::section/icons.phtml</argument>
+            <argument name="viewModel" xsi:type="object">Orba\StyleGuide\ViewModel\IconsProvider</argument>
+        </arguments>
+    </virtualType>
+    <type name="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+        <arguments>
+            <argument name="sections" xsi:type="array">
+                <item name="layouts" xsi:type="object" sortOrder="10">Orba\StyleGuide\Model\Section\Layouts</item>
+                <item name="colors" xsi:type="object" sortOrder="20">Orba\StyleGuide\Model\Section\Colors</item>
+                <item name="headings" xsi:type="object" sortOrder="30">Orba\StyleGuide\Model\Section\Headings</item>
+                <item name="paragraph" xsi:type="object" sortOrder="40">Orba\StyleGuide\Model\Section\Paragraph</item>
+                <item name="unorderedList" xsi:type="object" sortOrder="50">Orba\StyleGuide\Model\Section\UnorderedList</item>
+                <item name="orderedList" xsi:type="object" sortOrder="60">Orba\StyleGuide\Model\Section\OrderedList</item>
+                <item name="links" xsi:type="object" sortOrder="70">Orba\StyleGuide\Model\Section\Links</item>
+                <item name="buttons" xsi:type="object" sortOrder="80">Orba\StyleGuide\Model\Section\Buttons</item>
+                <item name="form" xsi:type="object" sortOrder="90">Orba\StyleGuide\Model\Section\Form</item>
+                <item name="tabs" xsi:type="object" sortOrder="100">Orba\StyleGuide\Model\Section\Tabs</item>
+                <item name="breadcrumbs" xsi:type="object" sortOrder="110">Orba\StyleGuide\Model\Section\Breadcrumbs</item>
+                <item name="tooltips" xsi:type="object" sortOrder="120">Orba\StyleGuide\Model\Section\Tooltips</item>
+                <item name="messages" xsi:type="object" sortOrder="130">Orba\StyleGuide\Model\Section\Messages</item>
+                <item name="pagination" xsi:type="object" sortOrder="140">Orba\StyleGuide\Model\Section\Pagination</item>
+                <item name="popup" xsi:type="object" sortOrder="150">Orba\StyleGuide\Model\Section\Popup</item>
+                <item name="icons" xsi:type="object" sortOrder="1000">Orba\StyleGuide\Model\Section\Icons</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Orba\StyleGuide\ViewModel\SectionBlocksProvider $viewModel */
+$viewModel = $block->getData('view_model');
+$sectionBlocks = $viewModel->getSectionBlocks();
+?>
+<div class="style-guide-container">
+    <dl>
+        <?php foreach ($sectionBlocks as $block): ?>
+        <?php $html = trim($block->toHtml()); ?>
+        <?php if ($html): ?>
+        <dt><?= $escaper->escapeHtml($block->getTitle()); ?></dt>
+        <dd>
+            <?= $block->toHtml() ?>
+        </dd>
+        <?php endif; ?>
+        <?php endforeach; ?>
+    </dl>
+</div>

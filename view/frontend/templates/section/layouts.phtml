@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+
+$layouts = [
+    'One Column' => '*/layout/onecolumn',
+    'Two Columns Left' => '*/layout/twocolumnsleft',
+    'Two Columns Right' => '*/layout/twocolumnsright',
+    'Three Columns' => '*/layout/threecolumns',
+]
+?>
+<ul>
+    <?php foreach ($layouts as $title => $path): ?>
+        <li>
+            <a href="<?= $escaper->escapeHtmlAttr($block->getUrl($path)) ?>"><?= $escaper->escapeHtml(__($title)) ?></a>
+        </li>
+    <?php endforeach; ?>
+</ul>

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="style-guide-buttons">
+    <div class="actions">
+        <button class="action primary"><span><?= $escaper->escapeHtml(__('Primary')) ?></span></button>
+        <button class="action secondary"><span><?= $escaper->escapeHtml(__('Secondary')) ?></span></button>
+    </div>
+    <div class="actions">
+        <button disabled="disabled" class="action primary"><span><?= $escaper->escapeHtml(__('Primary disabled')) ?></span></button>
+        <button disabled="disabled" class="action secondary"><span><?= $escaper->escapeHtml(__('Secondary disabled')) ?></span></button>
+    </div>
+</div>

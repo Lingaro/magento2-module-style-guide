@@ -1,0 +1,20 @@
+{
+  "name": "orba/magento2-module-style-guide",
+  "version": "1.0.0",
+  "require": {
+    "php": "~7.4.0",
+    "magento/framework": "103.0.*",
+    "magento/module-theme": "101.1.*",
+    "magento/module-ui": "101.2.*"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Orba\\StyleGuide\\": ""
+    }
+  },
+  "license": "Beerware"
+}

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Orba\StyleGuide\ViewModel\ColorsProvider $viewModel */
+$viewModel = $block->getViewModel();
+$colors = $viewModel->getColors();
+?>
+<?php if (!empty($colors)): ?>
+    <ul class="style-guide-colors">
+        <?php foreach ($colors as $color): ?>
+            <li class="style-guide-color style-guide-color-<?= $escaper->escapeHtmlAttr($color->getName()) ?>">
+                <span class="style-guide-color-visualization"></span>
+                <span class="style-guide-color-name" title="<?= $escaper->escapeHtmlAttr($color->getName()) ?>"><?= $escaper->escapeHtml($color->getName()) ?></span>
+                <span class="style-guide-color-css-color"><?= $escaper->escapeHtml($color->getCssColor()) ?></span>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>

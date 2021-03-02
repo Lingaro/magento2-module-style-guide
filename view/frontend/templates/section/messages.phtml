@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @copyright Copyright © 2021 Orba. All rights reserved.
+ * @author    info@orba.co
+ */
+
+declare(strict_types=1);
+
+/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="page messages">
+    <div class="message info">
+        <div>
+            <?= $escaper->escapeHtml(__('Info')) ?> lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Mauris sapien ante, facilisis nec imperdiet eget, elementum et dui. Etiam nec metus ac nibh sollicitudin laoreet consectetur id nibh.
+        </div>
+    </div>
+    <div class="message error">
+        <div>
+            <?= $escaper->escapeHtml(__('Error')) ?> suspendisse <a href="#">convallis</a> odio risus, blandit interdum dolor.
+        </div>
+    </div>
+    <div class="message warning">
+        <div>
+            <?= $escaper->escapeHtml(__('Warning')) ?> Fusce laoreet egestas lacus, eget accumsan eros fringilla eget. Morbi non venenatis diam, vel <a href="#">scelerisque</a> ex. Morbi gravida a libero at rutrum.
+        </div>
+    </div>
+    <div class="message notice">
+        <div>
+            <?= $escaper->escapeHtml(__('Notice')) ?> phasellus eget mi molestie, cursus lacus gravida, <a href="#">eleifend</a> neque sed imperdiet.
+        </div>
+    </div>
+    <div class="message success">
+        <div>
+            <?= $escaper->escapeHtml(__('Success')) ?> maecenas vel pretium velit, at scelerisque eros. Aenean et nulla tortor. Fusce finibus dictum mauris, et <a href="#">fermentum</a> tortor lobortis condimentum.
+        </div>
+    </div>
+</div>
