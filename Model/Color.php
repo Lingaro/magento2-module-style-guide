@@ -11,19 +11,27 @@ namespace Orba\StyleGuide\Model;
 
 class Color
 {
-    private string $name;
+    private string $code;
+
+    private string $label;
 
     private string $cssColor;
 
-    public function __construct(string $name, string $cssColor)
+    public function __construct(string $code, string $label, string $cssColor)
     {
-        $this->name = $name;
+        $this->code = $code;
+        $this->label = $label;
         $this->cssColor = $cssColor;
     }
 
-    public function getName(): string
+    public function getCode(): string
     {
-        return $this->name;
+        return $this->code;
+    }
+
+    public function getLabel(): string
+    {
+        return $this->label;
     }
 
     public function getCssColor(): string

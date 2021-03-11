@@ -16,9 +16,9 @@ $colors = $viewModel->getColors();
 <?php if (!empty($colors)): ?>
     <ul class="style-guide-colors">
         <?php foreach ($colors as $color): ?>
-            <li class="style-guide-color style-guide-color-<?= $escaper->escapeHtmlAttr($color->getName()) ?>">
+            <li class="style-guide-color style-guide-color-<?= $escaper->escapeHtmlAttr($color->getCode()) ?>">
                 <span class="style-guide-color-visualization"></span>
-                <span class="style-guide-color-name" title="<?= $escaper->escapeHtmlAttr($color->getName()) ?>"><?= $escaper->escapeHtml($color->getName()) ?></span>
+                <span class="style-guide-color-name" title="<?= $escaper->escapeHtmlAttr($color->getLabel()) ?>"><?= $escaper->escapeHtml($color->getLabel()) ?></span>
                 <span class="style-guide-color-css-color"><?= $escaper->escapeHtml($color->getCssColor()) ?></span>
             </li>
         <?php endforeach; ?>

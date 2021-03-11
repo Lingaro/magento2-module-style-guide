@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Orba\StyleGuide\ViewModel;
 
-use \InvalidArgumentException;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
+use Orba\StyleGuide\Action\ValidateColors;
 use Orba\StyleGuide\Model\Color;
 
 class ColorsProvider implements ArgumentInterface
@@ -20,13 +20,9 @@ class ColorsProvider implements ArgumentInterface
      */
     private array $colors;
 
-    public function __construct(array $colors = [])
+    public function __construct(ValidateColors $validateColors, array $colors = [])
     {
-        foreach ($colors as $color) {
-            if (!$color instanceof Color) {
-                throw new InvalidArgumentException('Array of color models required.');
-            }
-        }
+        $validateColors->execute($colors);
         $this->colors = $colors;
     }
 

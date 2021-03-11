@@ -9,7 +9,8 @@
     <!-- Exemplary color
     <virtualType name="Orba\StyleGuide\Model\Color\Example" type="Orba\StyleGuide\Model\Color">
         <arguments>
-            <argument name="name" xsi:type="string" translatable="true">example</argument>
+            <argument name="code" xsi:type="string"]>example</argument>
+            <argument name="label" xsi:type="string" translatable="true">example</argument>
             <argument name="cssColor" xsi:type="string">#000000</argument>
         </arguments>
     </virtualType>

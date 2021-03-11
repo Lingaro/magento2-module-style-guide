@@ -9,8 +9,6 @@
 
 & when (@media-common = true) {
   .style-guide-container {
-    line-height: 16px;
-
     > dl {
       margin-top: 60px;
 
@@ -119,8 +117,6 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
   .style-guide-container {
     > dl {
-      overflow: hidden;
-
       > dt {
         width: 200px;
         float: left;
@@ -129,6 +125,10 @@
       > dd {
         width: ~"calc(100% - 200px)";
         float: left;
+      }
+
+      &:after {
+        clear: both;
       }
     }
   }
