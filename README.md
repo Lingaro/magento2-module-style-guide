@@ -396,3 +396,17 @@ Clean the following caches to see your changes: config, full_page.
 Currently Style Guide module supports the following Magento versions:
 
 * 2.4.x
+
+## 6. Screenshots
+
+### 6.1. Style Guide applied on Luma theme
+
+![Style Guide applied on Luma theme](docs/img/screenshot-luma.png "Style Guide applied on Luma theme")
+
+### 6.2. Style Guide applied and customized for exemplary project theme
+
+![Style Guide applied and customized for exemplary project theme](docs/img/screenshot-custom.png "Style Guide applied and customized for exemplary project theme")
+
+## 7. Skeleton integration
+
+You can automatically set up Orba Skeleton for module development. To do so, copy `Makefile.dist` to `Makefile` and fill in `SKELETON` variable with URL to Skeleton's GIT repository. Then, run `make`. This will set up a new Skeleton project in your current root directory and copy module files to `source/packages/module-style-guide`. To run a project, simply run `make up`. 
