@@ -1,7 +1,7 @@
 {
   "name": "orba/magento2-module-style-guide",
   "description": "Magento 2 Style Guide Module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "require": {
     "php": "~7.4.0 || ~8.1.0",
     "magento/framework": "103.0.*",
