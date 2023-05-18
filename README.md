@@ -1,7 +1,7 @@
 Magento 2 Style Guide Module
 ============================
 
-by [Lingaro](https://lingaro.co)
+by [Lingaro](https://lingarogroup.com/)
 
 ## 1. Introduction
 
