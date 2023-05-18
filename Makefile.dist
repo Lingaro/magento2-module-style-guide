@@ -1,5 +1,5 @@
 COMPONENT_NAME:=module-style-guide
-COMPONENT:=orba/magento2-module-style-guide
+COMPONENT:=lingaro/magento2-module-style-guide
 SKELETON:=
 
 TARGET_PATH:=source/packages/$(COMPONENT_NAME)

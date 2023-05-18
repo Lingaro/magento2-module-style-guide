@@ -1,7 +1,7 @@
 Magento 2 Style Guide Module
 ============================
 
-by [Orba](https://orba.co)
+by [Lingaro](https://lingaro.co)
 
 ## 1. Introduction
 
@@ -20,7 +20,7 @@ The library is open sourced. Feel free to contribute!
 The recommended way to install this package is through [Composer](https://getcomposer.org/).
 
 ```
-composer require orba/magento2-module-style-guide
+composer require lingaro/magento2-module-style-guide
 ```
 
 ## 3. Overview of Style Guide sections
@@ -28,7 +28,7 @@ composer require orba/magento2-module-style-guide
 The main component of Style Guide is section. Each section has a label and a PHTML template.
 Section may have a view model if needed. Section may be marked as removed to not show it on Style Guide page.
 
-Default sections are defined in `etc/frontend/di.xml` file as an argument of `Orba\StyleGuide\ViewModel\SectionBlocksProvider` type.
+Default sections are defined in `etc/frontend/di.xml` file as an argument of `Lingaro\StyleGuide\ViewModel\SectionBlocksProvider` type.
 
 ### 3.1. Layouts
 
@@ -135,7 +135,7 @@ For the customizations you will need to create `etc/frontend/di.xml` file. Below
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+                 type="Lingaro\StyleGuide\ViewModel\SectionBlocksProvider">
         <arguments>
             <argument name="sections" xsi:type="array">
             </argument>
@@ -144,19 +144,19 @@ For the customizations you will need to create `etc/frontend/di.xml` file. Below
 </config>
 ```
 
-`Orba\StyleGuide\ViewModel\SectionBlocksProvider` is the main view model of style guide page.
+`Lingaro\StyleGuide\ViewModel\SectionBlocksProvider` is the main view model of style guide page.
 All the customizations will be injected there.
 
 The reason of defining `ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName` virtual type on top of this class is that thanks to that you can have different style guides defined for each theme used in the project.
 
-To apply custom view model to specific theme you need to create the following layout XML file in your theme folder: `Orba_StyleGuide/layout/orba_style_guide_index_index.xml`.
+To apply custom view model to specific theme you need to create the following layout XML file in your theme folder: `Lingaro_StyleGuide/layout/lingaro_style_guide_index_index.xml`.
 Below you can find an example:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="orba.style_guide">
+        <referenceBlock name="lingaro.style_guide">
             <arguments>
                 <argument name="view_model" xsi:type="object">ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName</argument>
             </arguments>
@@ -175,7 +175,7 @@ Below you can find an example:
 ```xml
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="ProjectVendor\StyleGuide\Model\Section\YourSection" type="Orba\StyleGuide\Model\Section">
+    <virtualType name="ProjectVendor\StyleGuide\Model\Section\YourSection" type="Lingaro\StyleGuide\Model\Section">
         <arguments>
             <argument name="title" xsi:type="string" translatable="true">Your section name</argument>
             <argument name="template" xsi:type="string">ProjectVendor_StyleGuide::section/your_section.phtml</argument>
@@ -184,7 +184,7 @@ Below you can find an example:
         </arguments>
     </virtualType>
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+                 type="Lingaro\StyleGuide\ViewModel\SectionBlocksProvider">
         <arguments>
             <argument name="sections" xsi:type="array">
                 <item name="your_section_code" xsi:type="object" sortOrder="100">ProjectVendor\StyleGuide\Model\Section\YourSection</item>
@@ -205,7 +205,7 @@ Below you can find a boilerplate.
 
 declare(strict_types=1);
 
-/** @var \Orba\StyleGuide\Block\Section $block */
+/** @var \Lingaro\StyleGuide\Block\Section $block */
 /** @var \Magento\Framework\Escaper $escaper */
 ?>
 <!-- Your code here -->
@@ -239,13 +239,13 @@ Below you can find an example:
 ```xml
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="ProjectVendor\StyleGuide\Model\Section\Tooltips" type="Orba\StyleGuide\Model\Section\Tooltips">
+    <virtualType name="ProjectVendor\StyleGuide\Model\Section\Tooltips" type="Lingaro\StyleGuide\Model\Section\Tooltips">
         <arguments>
             <argument name="isRemoved" xsi:type="boolean">true</argument>
         </arguments>
     </virtualType>
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+                 type="Lingaro\StyleGuide\ViewModel\SectionBlocksProvider">
         <arguments>
             <argument name="sections" xsi:type="array">
                 <item name="tooltips" xsi:type="object">ProjectVendor\StyleGuide\Model\Section\Tooltips</item>
@@ -272,10 +272,10 @@ Below you can find an example:
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+                 type="Lingaro\StyleGuide\ViewModel\SectionBlocksProvider">
         <arguments>
             <argument name="sections" xsi:type="array">
-                <item name="tooltips" xsi:type="object" sortOrder="123">Orba\StyleGuide\Model\Section\Tooltips</item>
+                <item name="tooltips" xsi:type="object" sortOrder="123">Lingaro\StyleGuide\Model\Section\Tooltips</item>
             </argument>
         </arguments>
     </virtualType>
@@ -293,7 +293,7 @@ Below you can find an example.
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- Colors -->
-    <virtualType name="ProjectVendor\StyleGuide\Model\Color\YourThemeName\ColorName" type="Orba\StyleGuide\Model\Color">
+    <virtualType name="ProjectVendor\StyleGuide\Model\Color\YourThemeName\ColorName" type="Lingaro\StyleGuide\Model\Color">
         <arguments>
             <argument name="code" xsi:type="string">color_code</argument>
             <argument name="label" xsi:type="string" translatable="true">label for visualization</argument>
@@ -301,7 +301,7 @@ Below you can find an example.
         </arguments>
     </virtualType>
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\ColorsProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\ColorsProvider">
+                 type="Lingaro\StyleGuide\ViewModel\ColorsProvider">
         <arguments>
             <argument name="colors" xsi:type="array">
                 <item name="color_code" xsi:type="object">ProjectVendor\StyleGuide\Model\Color\YourThemeName\ColorName</item>
@@ -309,14 +309,14 @@ Below you can find an example.
         </arguments>
     </virtualType>
     <virtualType name="ProjectVendor\StyleGuide\Model\Section\Colors\YourThemeName"
-                 type="Orba\StyleGuide\Model\Section\Colors">
+                 type="Lingaro\StyleGuide\Model\Section\Colors">
         <arguments>
             <argument name="viewModel" xsi:type="object">ProjectVendor\StyleGuide\ViewModel\ColorsProvider\YourThemeName</argument>
         </arguments>
     </virtualType>
     <!-- / Colors -->
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+                 type="Lingaro\StyleGuide\ViewModel\SectionBlocksProvider">
         <arguments>
             <argument name="sections" xsi:type="array">
                 <item name="colors" xsi:type="object">ProjectVendor\StyleGuide\Model\Section\Colors\YourThemeName</item>
@@ -326,7 +326,7 @@ Below you can find an example.
 </config>
 ```
 
-When that's done, you need to add some styles for your color visualization. Place the changes in `Orba_StyleGuide/web/css/source/_extend.less` file of your theme.
+When that's done, you need to add some styles for your color visualization. Place the changes in `Lingaro_StyleGuide/web/css/source/_extend.less` file of your theme.
 Below you can find a bolierplate.
 
 ```less
@@ -356,13 +356,13 @@ Below you can find an example.
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- Icons -->
-    <virtualType name="ProjectVendor\StyleGuide\Model\Icon\YourThemeName\IconName" type="Orba\StyleGuide\Model\Icon">
+    <virtualType name="ProjectVendor\StyleGuide\Model\Icon\YourThemeName\IconName" type="Lingaro\StyleGuide\Model\Icon">
     <arguments>
         <argument name="name" xsi:type="string">icon-name</argument>
         <argument name="cssClass" xsi:type="string">icon-css-class</argument>
     </arguments>
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\IconsProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\IconsProvider">
+                 type="Lingaro\StyleGuide\ViewModel\IconsProvider">
         <arguments>
             <argument name="icons" xsi:type="array">
                 <item name="icon-name" xsi:type="object">ProjectVendor\StyleGuide\Model\Icon\YourThemeName\IconName</item>
@@ -370,14 +370,14 @@ Below you can find an example.
         </arguments>
     </virtualType>
     <virtualType name="ProjectVendor\StyleGuide\Model\Section\Icons\YourThemeName"
-                 type="Orba\StyleGuide\Model\Section\Icons">
+                 type="Lingaro\StyleGuide\Model\Section\Icons">
         <arguments>
             <argument name="viewModel" xsi:type="object">ProjectVendor\StyleGuide\ViewModel\IconsProvider\YourThemeName</argument>
         </arguments>
     </virtualType>
     <!-- / Icons -->
     <virtualType name="ProjectVendor\StyleGuide\ViewModel\SectionBlocksProvider\YourThemeName"
-                 type="Orba\StyleGuide\ViewModel\SectionBlocksProvider">
+                 type="Lingaro\StyleGuide\ViewModel\SectionBlocksProvider">
         <arguments>
             <argument name="sections" xsi:type="array">
                 <item name="icons" xsi:type="object">ProjectVendor\StyleGuide\Model\Section\Icons\YourThemeName</item>
@@ -409,4 +409,4 @@ Currently Style Guide module supports the following Magento versions:
 
 ## 7. Skeleton integration
 
-You can automatically set up Orba Skeleton for module development. To do so, copy `Makefile.dist` to `Makefile` and fill in `SKELETON` variable with URL to Skeleton's GIT repository. Then, run `make`. This will set up a new Skeleton project in your current root directory and copy module files to `source/packages/module-style-guide`. To run a project, simply run `make up`. 
+You can automatically set up Lingaro Skeleton for module development. To do so, copy `Makefile.dist` to `Makefile` and fill in `SKELETON` variable with URL to Skeleton's GIT repository. Then, run `make`. This will set up a new Skeleton project in your current root directory and copy module files to `source/packages/module-style-guide`. To run a project, simply run `make up`. 

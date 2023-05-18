@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] - 2021-03-29
 ### Added
 - Screenshots of Style Guide page in readme file
-- Orba Skeleton integration
+- Lingaro Skeleton integration
 - Changelog file
 
 ## [1.0.1] - 2021-03-12
