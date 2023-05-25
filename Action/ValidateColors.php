@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @copyright Copyright © 2021 Orba. All rights reserved.
- * @author    info@orba.co
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
  */
 
 declare(strict_types=1);
 
-namespace Orba\StyleGuide\Action;
+namespace Lingaro\StyleGuide\Action;
 
 use InvalidArgumentException;
-use Orba\StyleGuide\Model\Color;
+use Lingaro\StyleGuide\Model\Color;
 
 class ValidateColors
 {

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
- * @copyright Copyright © 2021 Orba. All rights reserved.
- * @author    info@orba.co
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block name="orba.style_guide" template="Orba_StyleGuide::style_guide.phtml">
+            <block name="lingaro.style_guide" template="Lingaro_StyleGuide::style_guide.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Orba\StyleGuide\ViewModel\SectionBlocksProvider</argument>
+                    <argument name="view_model" xsi:type="object">Lingaro\StyleGuide\ViewModel\SectionBlocksProvider</argument>
                 </arguments>
             </block>
         </referenceContainer>

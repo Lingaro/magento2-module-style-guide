@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
- * @copyright Copyright © 2021 Orba. All rights reserved.
- * @author    info@orba.co
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block name="orba.style_guide.layout.three_columns" template="Orba_StyleGuide::layout/content.phtml" />
+            <block name="lingaro.style_guide.layout.three_columns" template="Lingaro_StyleGuide::layout/content.phtml" />
         </referenceContainer>
         <referenceContainer name="sidebar.main">
-            <block name="orba.style_guide.layout.three_columns.sidebar_main"
-                   template="Orba_StyleGuide::layout/sidebar.phtml"
+            <block name="lingaro.style_guide.layout.three_columns.sidebar_main"
+                   template="Lingaro_StyleGuide::layout/sidebar.phtml"
                    before="-" />
         </referenceContainer>
         <referenceContainer name="sidebar.additional">
-            <block name="orba.style_guide.layout.three_columns.sidebar_additional"
-                   template="Orba_StyleGuide::layout/sidebar.phtml"
+            <block name="lingaro.style_guide.layout.three_columns.sidebar_additional"
+                   template="Lingaro_StyleGuide::layout/sidebar.phtml"
                    before="-" />
         </referenceContainer>
     </body>
